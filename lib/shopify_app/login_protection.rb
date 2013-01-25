@@ -1,9 +1,9 @@
 module ShopifyApp::LoginProtection
   extend ActiveSupport::Concern
   
-  included do
-    rescue_from ActiveResource::UnauthorizedAccess, :with => :close_session
-  end
+  #included do
+  #  rescue_from ActiveResource::UnauthorizedAccess, :with => :close_session
+  #end
   
   def shopify_session
     if session[:shopify]
